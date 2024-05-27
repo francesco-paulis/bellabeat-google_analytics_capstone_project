@@ -1309,6 +1309,9 @@ ggplot(activities_week_fb %>%
   theme(legend.position = "none")
 ```
 
+!["plots_mean_activity_week"](plots/1.Fitbit_plots_mean_activity_week.png)
+
+
 ```{r}
 # Lifesnaps - plot mean minutes of activity during the week
 ggplot(activities_week_ls %>% 
@@ -1320,6 +1323,7 @@ ggplot(activities_week_ls %>%
   theme_minimal() +
   theme(legend.position = "none")  # add , axis.text.x = element_text(angle = 45, hjust = 1) to rotate x-axis labels by 45 degrees
 ```
+!["Lifesnaps_plot_mean_activity"](plots/2.Lifesnaps_plot_mean_activity_week.png)
 
 In both data frames are recorded more activities in the weekend and in the Monday.
 
@@ -1332,12 +1336,13 @@ In both data frames are recorded more activities in the weekend and in the Monda
 ggplot(fitbit_cl, aes(x = TotalSteps)) + 
   geom_boxplot()
 ```
-
+!["Fitbit_boxplot_steps"](plots/3.Fitbit_boxplot_steps.png)
 ```{r}
 # Lifesnaps - boxplot steps
 ggplot(lifesnaps_cl, aes(x = steps)) + 
   geom_boxplot()
 ```
+!["LifeSnaps_boxplot_steps"](plots/4.LifeSnaps_boxplot_steps.png)
 
 #### Mean steps during the week - plots
 
@@ -1354,6 +1359,8 @@ ggplot(steps_week_fb %>%
   theme(legend.position = "none")
 ```
 
+!["5.Fitbit_plot_steps_week"](plots/5.Fitbit_plot_steps_week.png)
+
 ```{r}
 # Lifesnaps - plot mean steps during the week
 
@@ -1367,6 +1374,7 @@ ggplot(steps_week_ls %>%
   theme(legend.position = "none")
 ```
 
+!["LifeSnaps_plot_steps_week"](plots/6.LifeSnaps_plot_steps_week.png)
 
 According to the average steps during the week, walks are longer in the Mondays and Saturdays. The Lifesnaps data frame show a little peak also in the Thursday.
 
@@ -1383,6 +1391,8 @@ ggplot(calories_week_fb %>%
   theme(legend.position = "none")
 ```
 
+!["FitBit_mean_calories_week"](plots/7.FitBit_mean_calories_week.png)
+
 ```{r}
 ggplot(calories_week_ls %>% 
          mutate(day_of_week = factor(day_of_week, levels = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))), aes(x = day_of_week, y= mean_calories, fill = day_of_week))+
@@ -1393,6 +1403,8 @@ ggplot(calories_week_ls %>%
   theme_minimal() +
   theme(legend.position = "none")
 ```
+
+!["LifeSnaps_mean_calories_week"](plots/8.LifeSnaps_mean_calories_week.png)
 
 The Lifesnaps data frame show a lower consume of calories. This could be due to the less needs of calories of the female body.
 
@@ -1405,12 +1417,16 @@ ggplot(fitbit_cl, aes(x = TotalMinutesAsleep/60)) +
   geom_boxplot()
 ```
 
+!["Fitbit_boxplot_minutes_asleep"](plots/9.Fitbit_boxplot_minutes_asleep.png)
+
 ```{r}
 # Lifesnaps - boxplot minutes asleep
 
 ggplot(lifesnaps_cl, aes(x = minutesAsleep/60)) + 
   geom_boxplot()
 ```
+
+!["LifeSnaps_boxplot_minutes_asleep"](plots/10.LifeSnaps_boxplot_minutes_asleep.png)
 
 #### Mean hours asleep during the week - plots
 
@@ -1427,6 +1443,8 @@ ggplot(hours_asleep_week_fb %>%
   theme(legend.position = "none")
 ```
 
+!["Fitbit_plot_sleep_week"](plots/11.Fitbit_plot_sleep_week.png)
+
 ```{r}
 # Lifesnaps - plot of mean hours asleep during the week
 
@@ -1439,6 +1457,8 @@ ggplot(hours_asleep_week_ls %>%
   theme_minimal() + 
   theme(legend.position = "none")
 ```
+
+!["LifeSnaps_plot_sleep_week"](plots/12.LifeSnaps_plot_sleep_week.png)
 
 #### Activity types vs time asleep - plots
 
@@ -1459,6 +1479,10 @@ ggplot(fitbit_cl, aes(x = VeryActiveMinutes + FairlyActiveMinutes + LightlyActiv
   ylab("Minutes Asleep")
 ```
 
+!["correlation_sedentarism_sleep"](plots/13.correlation_sedentarism_sleep.png)
+
+!["correlation_activity_sleep"](plots/14.correlation_activity_sleep.png)
+
 #### Correlation between number of steps and calories burned - plots
 
 ```{r}
@@ -1471,6 +1495,8 @@ ggplot(fitbit_cl, aes(x = TotalSteps, y = Calories)) +
   xlab("Steps") +
   ylab("Calories")
 ```
+
+!["correlation_step_calories"](plots/15.correlation_step_calories.png)
 
 ## 6) Act
 
