@@ -187,7 +187,7 @@ These are my evaluations about this dataset:
 
 Based on this evaluation, I decided to add more data sources in order to increase the accuracy of the analysis.
 
-I particular, I will exctract insight from the sources of data ["LifeSnaps: a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild"](https://zenodo.org/records/7229547) and ["Assessment of ownership of smart devices and the acceptability of digital health data sharing"](https://www.nature.com/articles/s41746-024-01030-x#citeas)
+I particular, I will exctract insight from the source of data ["LifeSnaps: a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild"](https://zenodo.org/records/7229547).
 
 ### • Inspection of the Dataset **LifeSnaps: a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild**:
 
@@ -314,39 +314,11 @@ The file who presents a hourly granularity cointains the following fields:
 
 -   **Citation**: HIGH. The original source of the data is cited by other sources, including scientific studies publicized in credible scientific journals.
 
-### • Inspection of the source of data **Assessment of ownership of smart devices and the acceptability of digital health data sharing**:
-
-#### Location of the source
-
-The source is an article where are reported findings of a survey, publicized in "npj Digital Medicine" is an open access, peer-reviewed journal, specialized in publications about digital medicine and health.
-
-#### Organization of the data
-
-The survey study consisted of 14 questions to determine ownership, usage, frequency and reason for usage of smart devicesand wearable, willingness to participate in digital health studies even sharing data collected by smart devices, type of data the respondent are comfortable sharing and why; in addition, demogrphic information such as gender and age group.
-
-#### Quality of the sources of data
-
-In this case data is already summarized, and it's not possible to access to the raw data. Data is from a second-party source but collected with a reliable scientific and statistical method. The topics of the survey are very similar to the business question, so this source will be very useful to answer to the need to highlight trends in the use of the smart devices who record health data of their owners. Data is recorded in January 2022, so is very current. Finally, The original source of the data is cited by other sources, including scientific studies publicized in credible scientific journals.
-
-#### Adressing licensing, privacy, security and accessibility
-
-All sources of data are licensed under a Creative Commons Attribution 4.0 International License. There aren't private data, so the use of these sources of data is secure from a privacy-protection point of view. Theoretically, in a real analysis data would be stored in a secure location with restricted access, especially with personal and sensitive data.
-
-#### Relevance of the data
-
-With this combination of data sources, it's possible to gain insight capable of providing a sufficiently comprehensive answer to the questions asked. In particular,it is possible to understand how smart devices are used for recording information on physical activities and health status, as well the willingness and opinions on the use and sharing of the data recorded for research purposes by potential and current users.
-
 ## 3) Process
 
 ### Fitbit Dataset
 
 First of all it is necessary to import all the data frames of the first data set.
-
-```{r}
-
-install.packages("tidyverse")
-
-```
 
 ```{r}
 
@@ -1074,7 +1046,6 @@ cor_gen_act_sleep_ls <-
 print(cor_gen_act_sleep_ls)
 ```
 
-
 #### Activity types vs time asleep - plots
 
 ```{r}
@@ -1177,7 +1148,6 @@ print(cor_steps_sleep_ls)
 
 #### Correlation between number of steps and sleep - plots
 
-
 ```{r}
 # Fitbit - Plot of correlation between number of steps and sleep
 
@@ -1188,7 +1158,6 @@ ggplot(fitbit_cl, aes(x = TotalSteps, y = TotalMinutesAsleep)) +
   xlab("Steps") +
   ylab("Minutes Asleep")
 ```
-
 
 ```{r}
 # Lifesnaps - Plot of correlation between number of steps and sleep
@@ -1508,9 +1477,10 @@ ggplot(fitbit_cl, aes(x = TotalSteps, y = Calories)) +
 
 - Bellabeat could help its users to manage the quality of their sleep, for example with notifications that signal the moment of rest or monitoring that allow to understand the quality of the sleep, in general actions that encourage a better awareness of the quality of sleep. These advices could be based on an ideal number of hours asleeps, also considering factors like the age and the physical activity performed during the day.
 
+## Acknowledgement and Bibliography
 
-
-
+- Furberg, R., Brinton, J., Keating, M., & Ortiz, A. (2016). Crowd-sourced Fitbit datasets 03.12.2016-05.12.2016 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.53894
+- Yfantidou, S., Karagianni, C., Efstathiou, S., Vakali, A., Palotti, J., Giakatos, D. P., Marchioro, T., Kazlouski, A., Ferrari, E., & Girdzijauskas, Š. (2022). LifeSnaps: a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild (Versione 4) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7229547
 
 
 
