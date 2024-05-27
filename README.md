@@ -1473,9 +1473,11 @@ ggplot(fitbit_cl, aes(x = TotalSteps, y = Calories)) +
 
 - There could be introduced notifications and step counters that could motivate the setting and reaching of daily step goals; the setting of these goals could be helped by appropriate tips based on age, calories burned, other activities.
 
--  The creation of communities to play activities could motivates the users.
+- The creation of communities to play activities could motivates the users.
 
 - Bellabeat could help its users to manage the quality of their sleep, for example with notifications that signal the moment of rest or monitoring that allow to understand the quality of the sleep, in general actions that encourage a better awareness of the quality of sleep. These advices could be based on an ideal number of hours asleeps, also considering factors like the age and the physical activity performed during the day.
+
+- To gain more precise insights is necessary to analyze data from Bellabeat users. 
 
 ## Acknowledgement and Bibliography
 
